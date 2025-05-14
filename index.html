@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Economic Calendar</title>
+    <style>
+        /* Stiluri responsive */
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .calendar-container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 500px;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        .poweredBy {
+            text-align: center;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        /* Stiluri mobile */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .calendar-container {
+                max-width: 100%;
+                padding: 10px;
+            }
+            
+            iframe {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar-container">
+        <iframe 
+            src="https://sslecal2.investing.com?columns=exc_flags,exc_currency,exc_importance,exc_actual,exc_forecast,exc_previous&features=datepicker,timezone&countries=25,32,6,37,72,22,17,39,14,10,35,43,56,36,110,11,26,12,4,5&calType=day&timeZone=8&lang=1" 
+            frameborder="0" 
+            allowtransparency="true" 
+            marginwidth="0" 
+            marginheight="0">
+        </iframe>
+        
+        <div class="poweredBy">
+            <span style="font-size: 12px; color: #333;">
+                Real Time Economic Calendar provided by 
+                <a href="https://www.investing.com/" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   style="color: #06a; text-decoration: none; font-weight: bold;">
+                    Investing.com
+                </a>
+            </span>
+        </div>
+    </div>
+</body>
+</html>
